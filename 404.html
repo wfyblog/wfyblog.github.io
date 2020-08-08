@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>请访问新站点 https://wfyblog.cn</title>
+    </head>
+    <body>
+        <p>跳转中，访问新域名站点<a href="https://wfyblog.cn.com" target="_blank">https://wfyblog.cn</a></p>
+    </body>
+    <script src="http://cdn.bootcss.com/purl/2.3.1/purl.min.js"></script>
+    <script>
+        var url = purl();
+        if (url.attr('host') == 'wfy-belief.cn') {
+            var old_url = url.attr('source');
+            var new_url = old_url.replace('wfy-belief.cn', "wfyblog.cn");
+            window.location.replace(new_url); 
+        }else if (url.attr('host') == 'www.wfy-belief.cn') {
+            var old_url = url.attr('source');
+            var new_url = old_url.replace('www.wfy-belief.cn', "wfyblog.cn");
+            window.location.replace(new_url);
+        }else {
+            window.location.href="https://wfyblog.cn";
+        }
+    </script>
+</html>
